@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="flume-avro-source" />
+        <module name="flume-checkstyle" />
+        <module name="flume-dataset-sink" />
+        <module name="flume-file-channel" />
+        <module name="flume-hdfs-sink" />
+        <module name="flume-hive-sink" />
+        <module name="flume-http-sink" />
+        <module name="flume-irc-sink" />
+        <module name="flume-jdbc-channel" />
+        <module name="flume-jms-source" />
+        <module name="flume-kafka-channel" />
+        <module name="flume-kafka-source" />
+        <module name="flume-ng-auth" />
+        <module name="flume-ng-configuration" />
+        <module name="flume-ng-core" />
+        <module name="flume-ng-elasticsearch-sink" />
+        <module name="flume-ng-embedded-agent" />
+        <module name="flume-ng-hbase-sink" />
+        <module name="flume-ng-kafka-sink" />
+        <module name="flume-ng-log4jappender" />
+        <module name="flume-ng-morphline-solr-sink" />
+        <module name="flume-ng-node" />
+        <module name="flume-ng-sdk" />
+        <module name="flume-ng-tests" />
+        <module name="flume-scribe-source" />
+        <module name="flume-shared-kafka-test" />
+        <module name="flume-spillable-memory-channel" />
+        <module name="flume-taildir-source" />
+        <module name="flume-thrift-source" />
+        <module name="flume-tools" />
+        <module name="flume-twitter-source" />
+        <module name="spark-test" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="flume-avro-source" target="1.6" />
+      <module name="flume-checkstyle" target="1.6" />
+      <module name="flume-dataset-sink" target="1.6" />
+      <module name="flume-file-channel" target="1.6" />
+      <module name="flume-hdfs-sink" target="1.6" />
+      <module name="flume-hive-sink" target="1.6" />
+      <module name="flume-http-sink" target="1.6" />
+      <module name="flume-irc-sink" target="1.6" />
+      <module name="flume-jdbc-channel" target="1.6" />
+      <module name="flume-jms-source" target="1.6" />
+      <module name="flume-kafka-channel" target="1.6" />
+      <module name="flume-kafka-source" target="1.6" />
+      <module name="flume-ng-auth" target="1.8" />
+      <module name="flume-ng-channels" target="1.6" />
+      <module name="flume-ng-clients" target="1.6" />
+      <module name="flume-ng-configuration" target="1.8" />
+      <module name="flume-ng-core" target="1.8" />
+      <module name="flume-ng-dist" target="1.6" />
+      <module name="flume-ng-elasticsearch-sink" target="1.6" />
+      <module name="flume-ng-embedded-agent" target="1.6" />
+      <module name="flume-ng-hbase-sink" target="1.6" />
+      <module name="flume-ng-kafka-sink" target="1.8" />
+      <module name="flume-ng-legacy-sources" target="1.6" />
+      <module name="flume-ng-log4jappender" target="1.8" />
+      <module name="flume-ng-morphline-solr-sink" target="1.6" />
+      <module name="flume-ng-node" target="1.6" />
+      <module name="flume-ng-sdk" target="1.8" />
+      <module name="flume-ng-sinks" target="1.6" />
+      <module name="flume-ng-sources" target="1.6" />
+      <module name="flume-ng-tests" target="1.8" />
+      <module name="flume-parent" target="1.6" />
+      <module name="flume-scribe-source" target="1.6" />
+      <module name="flume-shared" target="1.6" />
+      <module name="flume-shared-kafka-test" target="1.8" />
+      <module name="flume-spillable-memory-channel" target="1.6" />
+      <module name="flume-taildir-source" target="1.8" />
+      <module name="flume-thrift-source" target="1.6" />
+      <module name="flume-tools" target="1.8" />
+      <module name="flume-twitter-source" target="1.6" />
+      <module name="spark-test" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

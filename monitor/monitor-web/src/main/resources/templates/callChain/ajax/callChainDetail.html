@@ -1,0 +1,56 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <div class="modal-header">
+        <button type="button" class="close js-close-call-chain-modal"  aria-hidden="true">×</button>
+        <h4 class="modal-title" id="myModalLabel">
+            <ul class="nav nav-pills">
+                <li>
+                    <a href="#">持续时间<span class="badge" th:text="${data.spendTime/1000000 + 'ms'}"></span></a>
+                </li>
+                <li>
+                    <a href="#">调用链深度<span class="badge" th:text="${data.depth}"></span></a>
+                </li>
+                <li>
+                    <a href="#">调用链节点个数<span class="badge" th:text="${data.totalSpans}"></span></a>
+                </li>
+            </ul>
+        </h4>
+    </div>
+    <div class="modal-body">
+        <table class="table table-hover table-striped">
+            <tbody>
+                <tr>
+                    <div th:each="transactions : ${data.transactionVos}">
+                        <td>
+                            <table th:each="transaction : ${transactions}" class ="table table-hover table-striped">
+                                <thead>
+                                    <tr>
+                                        <th class="css-table-text" th:text="${transaction.applicationName}"></th>
+                                        <th class="css-table-text">平均时间</th>
+                                        <th class="css-table-text">调用次数</th>
+                                        <th class="css-table-text">总时间</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="col-xs-3">
+                                            <div class="css-call-chain-name-width">
+                                                <span th:class="${#lists.isEmpty(transaction.stackNodes)}?'':'glyphicon glyphicon-plus-sign js-stack-nodes'" th:text="${transaction.name}" th:attr="data-transaction-trance-id=${transaction.traceId},data-transaction-name=${transaction.name},data-transaction-depth=${transaction.callChainDepth}"></span>
+                                            </div>
+                                        </td>
+                                        <td class="css-table-text" th:text="${transaction.spendTime/1000000/transaction.invocations + 'ms'}"></td>
+                                        <td class="css-table-text" th:text="${transaction.invocations}"></td>
+                                        <td class="css-table-text" th:text="${transaction.spendTime/1000000 + 'ms'}"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </div>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <script th:src="@{/static/script/transactionStackDetail.js}"></script>
+</html>

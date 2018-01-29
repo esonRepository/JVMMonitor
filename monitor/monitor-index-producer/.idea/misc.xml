@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="EclipseCodeFormatter">
+    <option name="defaultSettings" value="true" />
+    <option name="eclipseVersion" value="ECLIPSE_44" />
+    <option name="formatter" value="ECLIPSE" />
+    <option name="id" value="1494399356621" />
+    <option name="importOrdering" value="ECLIPSE_44" />
+    <option name="name" value="default" />
+    <option name="pathToConfigFileJava" value="E:/project/FC_dev/Coding standards/Eclipse_Formatter_v0.1.xml" />
+    <option name="selectedJavaProfile" value="Code_Eclipse_Formatter" />
+    <option name="useOldEclipseJavaFormatter" value="true" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="F:/flume/apache-flume-1.8.0-src/flume-ng-sinks/flume-ng-kafka-sink/pom.xml" />
+        <option value="F:/flume/apache-flume-1.8.0-src/flume-ng-sources/flume-taildir-source/pom.xml" />
+        <option value="F:/flume/apache-flume-1.8.0-src/flume-ng-core/pom.xml" />
+        <option value="F:/flume/apache-flume-1.8.0-src/flume-ng-configuration/pom.xml" />
+        <option value="F:/flume/apache-flume-1.8.0-src/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/classes" />
+  </component>
+</project>

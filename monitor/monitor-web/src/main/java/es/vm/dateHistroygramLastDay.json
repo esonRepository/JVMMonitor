@@ -1,0 +1,21 @@
+{
+  "query": {
+    "bool": {
+      "must": [?0]
+    }
+  },
+  "size": 0,
+  "aggs": {
+    "detail": {
+      "date_histogram": {
+        "field": "startTime",
+        "interval": "2h",
+        "format": "yyyy-MM-dd HH:mm",
+        "min_doc_count": 0,
+        "extended_bounds": {
+          "min": "?1"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th class="css-table-text">调用链名称</th>
+            <th class="css-table-text">平均时间</th>
+            <th class="css-table-text">调用次数</th>
+            <th class="css-table-text">总时间</th>
+            <th class="css-table-text">调用链深度</th>
+            <th class="css-table-text">操作</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="callChain : ${data.callChains}">
+            <td class="css-table-text" th:text="${callChain.name}"></td>
+            <td class="css-table-text" th:text="${callChain.averageTime}"></td>
+            <td class="css-table-text" th:text="${callChain.invocations}"></td>
+            <td class="css-table-text" th:text="${callChain.totalTime}"></td>
+            <td class="css-table-text" th:text="${callChain.depth}"></td>
+            <td class="css-table-text">
+                <div class="btn-group btn-group-xs">
+                    <button class="btn btn-primary js-call-chain-detail" th:attr="data-call-chain-name=${callChain.name}"><span class="fa fa-edit"></span>查看最新单链详情</button>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+<!-- 调用链（Modal） -->
+<div class="modal fade"  id="callChainDetailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg css-call-chain-detail-modal">
+        <div class="modal-content" id="callChainDetailModalContent">
+            <!--content -->
+
+        </div>
+    </div>
+</div>
+
+
+<!-- 堆栈详情（Modal） -->
+<div class="modal fade"  id="transactionStackModal" tabindex="-1" role="dialog" aria-labelledby="transactionStackModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg css-transaction-stack-detail-modal">
+        <div class="modal-content" id="transactionStackModalContent">
+            <!--content -->
+
+        </div>
+    </div>
+</div>
+
+<script th:src="@{/static/script/callChainResult.js}"></script>
+
+</html>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <!-- 加载db.properties文件中的内容，db.properties文件中key命名要有一定的特殊规则 -->
+    <context:property-placeholder location="classpath:application.properties" ignore-unresolvable="true"/>
+
+    <!-- 注解扫描器 -->
+    <context:component-scan base-package="com.yatang.monitor.producer"/>
+
+
+    <!--进程消息 -->
+    <bean id="processKafkaProducer" class="com.yatang.monitor.producer.kafka.KafkaTraceProducer" init-method="init"
+          destroy-method="destroy">
+        <property name="brokerList">
+            <value>${kafka.broker.list}</value>
+        </property>
+
+        <property name="topic">
+            <value>processTopic</value>
+        </property>
+    </bean>
+
+
+    <bean id="processKafkaConsumer" class="com.yatang.monitor.producer.kafka.KafkaEsConsumer" init-method="init"
+          destroy-method="destroy">
+        <property name="brokerList">
+            <value>${kafka.broker.list}</value>
+        </property>
+
+        <property name="groupId">
+            <value>${kafka.process.consumer.group}</value>
+        </property>
+        <property name="topic">
+            <value>processTopic</value>
+        </property>
+        <property name="esClient">
+            <ref bean="esClient"/>
+        </property>
+    </bean>
+
+
+    <!--JVM调用栈 -->
+    <bean id="transactionKafkaProducer" class="com.yatang.monitor.producer.kafka.KafkaTraceProducer" init-method="init"
+          destroy-method="destroy">
+        <property name="brokerList">
+            <value>${kafka.broker.list}</value>
+        </property>
+
+        <property name="topic">
+            <value>transactionTopic</value>
+        </property>
+    </bean>
+
+
+    <bean id="transactionKafkaConsumer" class="com.yatang.monitor.producer.kafka.KafkaEsConsumer" init-method="init"
+          destroy-method="destroy">
+        <property name="brokerList">
+            <value>${kafka.broker.list}</value>
+        </property>
+
+        <property name="groupId">
+            <value>${kafka.transaction.consumer.group}</value>
+        </property>
+        <property name="topic">
+            <value>transactionTopic</value>
+        </property>
+        <property name="esClient">
+            <ref bean="esClient"/>
+        </property>
+    </bean>
+
+
+    <!--日志消息-->
+    <bean id="logKafkaConsumer" class="com.yatang.monitor.producer.kafka.KafkaEsConsumer" init-method="init"
+          destroy-method="destroy">
+        <property name="brokerList">
+            <value>${kafka.broker.list}</value>
+        </property>
+
+        <property name="groupId">
+            <value>${kafka.log.consumer.group}</value>
+        </property>
+        <property name="topic">
+            <value>logTopic</value>
+        </property>
+        <property name="esClient">
+            <ref bean="esClient"/>
+        </property>
+    </bean>
+
+
+</beans>

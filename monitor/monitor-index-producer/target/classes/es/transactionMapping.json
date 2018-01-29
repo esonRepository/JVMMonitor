@@ -1,0 +1,59 @@
+{
+  "settings": {
+    "number_of_shards": 10,
+    "number_of_replicas": 1,
+    "index.refresh_interval": "1s",
+    "index.translog.flush_threshold_size": "1000m"
+  },
+  "index": {
+    "max_result_window": 100000000
+  },
+  "mappings": {
+    "transaction": {
+      "dynamic_templates": [
+        {
+          "strings": {
+            "match_mapping_type": "string",
+            "match": "*",
+            "mapping": {
+              "type": "keyword"
+            }
+          }
+        }
+      ],
+      "properties": {
+        "transferTime": {
+          "type": "long"
+        },
+        "spendTime": {
+          "type": "long"
+        },
+        "startTimeLong": {
+          "type": "long"
+        },
+        "startTime": {
+          "format": "yyyy-MM-dd HH:mm:ss",
+          "type": "date"
+        },
+        "endTime": {
+          "format": "yyyy-MM-dd HH:mm:ss",
+          "type": "date"
+        },
+        "stackNodes": {
+          "properties": {
+            "invocations": {
+              "type": "long"
+            },
+            "spendTime": {
+              "type": "long"
+            },
+            "stackDepth": {
+              "type": "long"
+            }
+          },
+          "type": "nested"
+        }
+      }
+    }
+  }
+}

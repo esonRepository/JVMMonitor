@@ -1,0 +1,11 @@
+{
+  "size":0,
+  "aggs":{
+    "applicationNames":{
+      "terms":{
+        "field":"applicationNames",
+        "size":100
+      }
+    }
+  }
+}

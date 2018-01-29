@@ -1,0 +1,38 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<div class="css-monitor-main-content">
+
+    <ol class="breadcrumb">
+        <li><a href="javascript:void(0);">监控系统</a></li>
+        <li><a href="javascript:void(0);" class="active">依赖关系</a></li>
+    </ol>
+
+    <form class="form-inline" role="form" id="dependencySearchForm">
+        <div class="form-group">
+            <div class="form-group">
+                <label>应用名称</label>
+                <select class="form-control" id="applicationName" name="applicationName">
+                    <option value="" selected="selected">请选择</option>
+                    <div th:each="applicationName : ${applicationNames}">
+                        <option th:value="${applicationName}" th:text="${applicationName}"></option>
+                    </div>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label>开始时间</label>
+            <input type="text" class="form-control" id="startTime" name="startTime" placeholder="请输入开始时间"/>
+        </div>
+        <div class="form-group">
+            <label>结束时间</label>
+            <input type="text" class="form-control" id="endTime" name="endTime" placeholder="请输入结束时间"/>
+        </div>
+        <button type="button" class="btn btn-default js-analyse-dependency">分析依赖</button>
+    </form>
+
+    <div class="css-dependncy-result-container">
+        <div id="dependency-waiting-content"></div>
+        <div id="dependency-result" class="css-dependency-result"></div>
+    </div>
+</div>
+<script th:src="@{/static/script/dependency.js}"></script>
+</html>

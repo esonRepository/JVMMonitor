@@ -1,0 +1,30 @@
+.css-call-chain-results {
+    margin-top: 30px;
+}
+
+.css-table-text {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.css-call-chain-name-width {
+    word-break: break-all;
+    display: inline-block;
+    width: 200px;
+}
+
+.css-transaction-stack-name-width {
+    word-break: break-all;
+    display: inline-block;
+    width: 600px;
+}
+
+.css-call-chain-detail-modal {
+    width: 1200px;
+}
+
+.css-transaction-stack-detail-modal {
+    width: 1000px;
+    height: 800px;
+}
+

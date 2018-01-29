@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-ng-legacy-sources/flume-avro-source/flume-avro-source.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-ng-legacy-sources/flume-avro-source/flume-avro-source.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-checkstyle/flume-checkstyle.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-checkstyle/flume-checkstyle.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-ng-sinks/flume-dataset-sink/flume-dataset-sink.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-ng-sinks/flume-dataset-sink/flume-dataset-sink.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-ng-channels/flume-file-channel/flume-file-channel.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-ng-channels/flume-file-channel/flume-file-channel.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-ng-sinks/flume-hdfs-sink/flume-hdfs-sink.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-ng-sinks/flume-hdfs-sink/flume-hdfs-sink.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-ng-sinks/flume-hive-sink/flume-hive-sink.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-ng-sinks/flume-hive-sink/flume-hive-sink.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-ng-sinks/flume-http-sink/flume-http-sink.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-ng-sinks/flume-http-sink/flume-http-sink.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-ng-sinks/flume-irc-sink/flume-irc-sink.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-ng-sinks/flume-irc-sink/flume-irc-sink.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-ng-channels/flume-jdbc-channel/flume-jdbc-channel.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-ng-channels/flume-jdbc-channel/flume-jdbc-channel.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-ng-sources/flume-jms-source/flume-jms-source.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-ng-sources/flume-jms-source/flume-jms-source.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-ng-channels/flume-kafka-channel/flume-kafka-channel.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-ng-channels/flume-kafka-channel/flume-kafka-channel.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-ng-sources/flume-kafka-source/flume-kafka-source.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-ng-sources/flume-kafka-source/flume-kafka-source.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-ng-auth/flume-ng-auth.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-ng-auth/flume-ng-auth.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-ng-channels/flume-ng-channels.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-ng-channels/flume-ng-channels.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-ng-clients/flume-ng-clients.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-ng-clients/flume-ng-clients.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-ng-configuration/flume-ng-configuration.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-ng-configuration/flume-ng-configuration.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-ng-core/flume-ng-core.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-ng-core/flume-ng-core.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-ng-dist/flume-ng-dist.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-ng-dist/flume-ng-dist.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-ng-sinks/flume-ng-elasticsearch-sink/flume-ng-elasticsearch-sink.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-ng-sinks/flume-ng-elasticsearch-sink/flume-ng-elasticsearch-sink.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-ng-embedded-agent/flume-ng-embedded-agent.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-ng-embedded-agent/flume-ng-embedded-agent.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-ng-sinks/flume-ng-hbase-sink/flume-ng-hbase-sink.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-ng-sinks/flume-ng-hbase-sink/flume-ng-hbase-sink.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-ng-sinks/flume-ng-kafka-sink/flume-ng-kafka-sink.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-ng-sinks/flume-ng-kafka-sink/flume-ng-kafka-sink.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-ng-legacy-sources/flume-ng-legacy-sources.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-ng-legacy-sources/flume-ng-legacy-sources.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-ng-clients/flume-ng-log4jappender/flume-ng-log4jappender.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-ng-clients/flume-ng-log4jappender/flume-ng-log4jappender.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-ng-sinks/flume-ng-morphline-solr-sink/flume-ng-morphline-solr-sink.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-ng-sinks/flume-ng-morphline-solr-sink/flume-ng-morphline-solr-sink.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-ng-node/flume-ng-node.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-ng-node/flume-ng-node.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-ng-sdk/flume-ng-sdk.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-ng-sdk/flume-ng-sdk.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-ng-sinks/flume-ng-sinks.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-ng-sinks/flume-ng-sinks.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-ng-sources/flume-ng-sources.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-ng-sources/flume-ng-sources.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-ng-tests/flume-ng-tests.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-ng-tests/flume-ng-tests.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-parent.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-parent.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-ng-sources/flume-scribe-source/flume-scribe-source.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-ng-sources/flume-scribe-source/flume-scribe-source.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-shared/flume-shared.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-shared/flume-shared.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-shared/flume-shared-kafka-test/flume-shared-kafka-test.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-shared/flume-shared-kafka-test/flume-shared-kafka-test.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-ng-channels/flume-spillable-memory-channel/flume-spillable-memory-channel.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-ng-channels/flume-spillable-memory-channel/flume-spillable-memory-channel.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-ng-sources/flume-taildir-source/flume-taildir-source.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-ng-sources/flume-taildir-source/flume-taildir-source.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-ng-legacy-sources/flume-thrift-source/flume-thrift-source.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-ng-legacy-sources/flume-thrift-source/flume-thrift-source.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-tools/flume-tools.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-tools/flume-tools.iml" />
+      <module fileurl="file://F:/flume/apache-flume-1.8.0-src/flume-ng-sources/flume-twitter-source/flume-twitter-source.iml" filepath="F:/flume/apache-flume-1.8.0-src/flume-ng-sources/flume-twitter-source/flume-twitter-source.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spark-test.iml" filepath="$PROJECT_DIR$/spark-test.iml" />
+    </modules>
+  </component>
+</project>

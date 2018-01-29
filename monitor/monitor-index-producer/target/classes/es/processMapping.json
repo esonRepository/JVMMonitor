@@ -1,0 +1,44 @@
+{
+  "settings": {
+    "number_of_shards": 3,
+    "number_of_replicas": 1,
+    "index.refresh_interval": "1s",
+    "index.translog.flush_threshold_size": "1000m"
+  },
+  "index": {
+    "max_result_window": 100000000
+  },
+  "mappings": {
+    "process": {
+      "dynamic_templates": [
+        {
+          "strings": {
+            "match_mapping_type": "string",
+            "match": "*",
+            "mapping": {
+              "type": "keyword"
+            }
+          }
+        }
+      ],
+      "properties": {
+        "time": {
+          "format": "yyyy-MM-dd HH:mm:ss",
+          "type": "date"
+        },
+        "cpuLoad": {
+          "type": "float"
+        },
+        "freeMem": {
+          "type": "float"
+        },
+        "usedMem": {
+          "type": "float"
+        },
+        "threadCount": {
+          "type": "long"
+        }
+      }
+    }
+  }
+}

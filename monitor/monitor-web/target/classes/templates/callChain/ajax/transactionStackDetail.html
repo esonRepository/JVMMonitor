@@ -1,0 +1,48 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<div class="modal-header">
+    <button type="button" class="close js-close-transaction-stack-modal" aria-hidden="true">×</button>
+    <h4 class="modal-title" id="transactionStackModalLabel">
+        <ul class="nav nav-pills">
+            <li>
+                <a href="#">平均时间<span class="badge" th:text="${data.spendTime/data.invocations/1000000 + 'ms'}"></span></a>
+            </li>
+            <li>
+                <a href="#">调用次数<span class="badge" th:text="${data.invocations}"></span></a>
+            </li>
+            <li>
+                <a href="#">总时间<span class="badge" th:text="${data.spendTime/1000000 + 'ms'}"></span></a>
+            </li>
+        </ul>
+    </h4>
+</div>
+<div class="modal-body">
+    <table class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th class="css-table-text">名称</th>
+                <th class="css-table-text">平均时间</th>
+                <th class="css-table-text">调用次数</th>
+                <th class="css-table-text">总时间</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="stackNode : ${data.stackNodes}">
+                <td class="col-xs-3">
+                    <div class="css-transaction-stack-name-width">
+                        <span th:each="i:${#numbers.sequence(1,stackNode.stackDepth)}"></span>
+                        <span th:text="${stackNode.name}"></span>
+                        <div th:unless="${#strings.isEmpty(stackNode.dbScript)}">
+                            <span class="glyphicon glyphicon-paperclip"><p class="text-info" th:text="${stackNode.dbScript}"/></span>
+                        </div>
+                    </div>
+                </td>
+                <td class="css-table-text"
+                    th:text="${stackNode.spendTime/stackNode.invocations/1000000 + 'ms'}"></td>
+                <td class="css-table-text" th:text="${stackNode.invocations}"></td>
+                <td class="css-table-text" th:text="${stackNode.spendTime/1000000 + 'ms'}"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<script th:src="@{/static/script/stackDetail.js}"></script>
+</html>

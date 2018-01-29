@@ -1,0 +1,36 @@
+{
+  "query":{
+    "bool":{
+      "must":[?0]
+    }
+  },
+  "size":0,
+  "aggs":{
+    "callChains":{
+      "terms":{
+        "field": "name",
+        "size": ?1,
+        "order":{
+          "totalTime": "desc"
+        }
+      },
+      "aggs":{
+        "callChainDepth":{
+          "terms":{
+            "field": "depth"
+          }
+        },
+        "totalTime":{
+          "sum":{
+            "field": "spendTime"
+          }
+        },
+        "agverageTime":{
+          "avg":{
+            "field": "spendTime"
+          }
+        }
+      }
+    }
+  }
+}
