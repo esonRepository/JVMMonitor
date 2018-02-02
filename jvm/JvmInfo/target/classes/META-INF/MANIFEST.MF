@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Premain-Class: com.busi.jvm.agent.bootstrap.BootstrapAgent
+Can-Retransform-Classes: true
+Can-Set-Native-Method-Prefix: true
+Main-Class: com.busi.jvm.agent.bootstrap.BootstrapAgent
