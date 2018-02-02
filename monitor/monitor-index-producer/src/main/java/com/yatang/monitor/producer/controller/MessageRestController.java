@@ -2,6 +2,7 @@ package com.yatang.monitor.producer.controller;
 
 import com.alibaba.fastjson.JSONArray;
 import com.yatang.monitor.producer.container.TraceIdsContainer;
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,6 +20,8 @@ import com.yatang.monitor.producer.kafka.KafkaTraceProducer;
 
 @RestController
 public class MessageRestController {
+
+	private final static Logger	logger	= Logger.getLogger(MessageRestController.class);
 
 	@Autowired
 	@Qualifier("transactionKafkaProducer")
@@ -43,7 +46,6 @@ public class MessageRestController {
 
 	@RequestMapping(value = "/process", method = RequestMethod.POST)
 	public void sendProcess(@RequestBody String processJson) {
-
 		JSONObject json = JSON.parseObject(processJson);
 		String id = json.getString("id");
 		processKafkaProducer.send(processJson, id);

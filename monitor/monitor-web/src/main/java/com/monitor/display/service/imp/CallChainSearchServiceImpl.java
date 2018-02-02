@@ -54,9 +54,9 @@ public class CallChainSearchServiceImpl implements CallChainSearchService {
 	public CallChainSearchResultVo searchCallChain(CallChainQueryDto callChainQueryDto) {
 
 		StringBuilder queryBuilder = new StringBuilder(100);
-		EsQueryTools.buildCallChainApplicationQuery(queryBuilder,callChainQueryDto.getApplicationName());
-		EsQueryTools.buildCallChainStartTimeQuery(queryBuilder,callChainQueryDto.getStartTime());
-		EsQueryTools.buildCallChainEndTimeQuery(queryBuilder,callChainQueryDto.getEndTime());
+		EsQueryTools.buildTermQuery(queryBuilder, "applicationNames", callChainQueryDto.getApplicationName());
+		EsQueryTools.buildStartTimeQuery(queryBuilder, "startTime", callChainQueryDto.getStartTime());
+		EsQueryTools.buildEndTimeQuery(queryBuilder, "endTime", callChainQueryDto.getEndTime());
 
 		if (queryBuilder.length() > 0) {
 			queryBuilder.delete(queryBuilder.length() - 1, queryBuilder.length());

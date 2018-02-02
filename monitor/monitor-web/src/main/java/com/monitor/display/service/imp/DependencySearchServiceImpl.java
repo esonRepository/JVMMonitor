@@ -25,8 +25,8 @@ public class DependencySearchServiceImpl implements DependencySearchService {
 	@ESJsonQuery(jsonFilePath = "es/dependency/dependencyQuery.json")
 	private String			dependencyQuery;
 
-	@ESJsonQuery(jsonFilePath = "es/dependency/callChainQueryByIds.json")
-	private String			callChainQueryByIds;
+	@ESJsonQuery(jsonFilePath = "es/dependency/callChainQueryByIdsQuery.json")
+	private String			callChainQueryByIdsQuery;
 
 	@Autowired
 	private EsServerTools	esServerTools;
@@ -44,9 +44,9 @@ public class DependencySearchServiceImpl implements DependencySearchService {
 	public DependencyVo analyseDependency(DependencyQueryDto dependencyQueryDto) {
 		StringBuilder queryBuilder = new StringBuilder(100);
 
-		EsQueryTools.buildCallChainApplicationQuery(queryBuilder, dependencyQueryDto.getApplicationName());
-		EsQueryTools.buildCallChainStartTimeQuery(queryBuilder, dependencyQueryDto.getStartTime());
-		EsQueryTools.buildCallChainEndTimeQuery(queryBuilder, dependencyQueryDto.getEndTime());
+		EsQueryTools.buildTermQuery(queryBuilder, "applicationNames", dependencyQueryDto.getApplicationName());
+		EsQueryTools.buildStartTimeQuery(queryBuilder, "startTime", dependencyQueryDto.getStartTime());
+		EsQueryTools.buildEndTimeQuery(queryBuilder, "endTime", dependencyQueryDto.getEndTime());
 
 		if (queryBuilder.length() > 0) {
 			queryBuilder.delete(queryBuilder.length() - 1, queryBuilder.length());
@@ -57,7 +57,7 @@ public class DependencySearchServiceImpl implements DependencySearchService {
 		List<Object> idObjs = JsonPathTools.getValues("aggregations.callChains.buckets.id.buckets.key", esResult);
 
 		String ids = EsQueryTools.addDoubleQuotesAndJoinWithComma(idObjs);
-		query = EsJsonQueryTools.replaceToken(callChainQueryByIds, new String[] { ids });
+		query = EsJsonQueryTools.replaceToken(callChainQueryByIdsQuery, new String[] { ids });
 		esResult = HttpClientTools.doPost(esServerTools.getCallChainSearchUrl(), query);
 
 		return DependencyVoBuilder.buildDependencyVo(esResult);

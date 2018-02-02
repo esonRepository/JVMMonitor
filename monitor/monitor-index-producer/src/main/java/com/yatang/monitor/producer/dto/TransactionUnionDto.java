@@ -12,7 +12,7 @@ public class TransactionUnionDto implements Serializable {
 	private String					ip;
 
 	/**
-	 * 服务名，比如dubbo服务有好几台机器，服务名是一致的
+	 * 应用名，比如dubbo服务有好几台机器，应用名是一致的
 	 */
 	private String					applicationName;
 
@@ -75,7 +75,7 @@ public class TransactionUnionDto implements Serializable {
 	 */
 	private String					requestType;
 
-	private List<StackNodeUnionDto> stackNodes = new LinkedList<>();
+	private List<StackNodeUnionDto>	stackNodes	= new LinkedList<>();
 
 
 
@@ -292,4 +292,5 @@ public class TransactionUnionDto implements Serializable {
 	public void setCallChainDepth(int callChainDepth) {
 		this.callChainDepth = callChainDepth;
 	}
+
 }

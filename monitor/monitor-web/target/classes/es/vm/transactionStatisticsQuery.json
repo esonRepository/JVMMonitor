@@ -1,0 +1,86 @@
+{
+  "query": {
+    "range": {
+      "startTime": {
+        "gte": "?0"
+      }
+    }
+  },
+  "size": 0,
+  "aggs": {
+    "transactions": {
+      "terms": {
+        "field": "name",
+        "size": 10,
+        "order": {
+          "totalTime": "desc"
+        }
+      },
+      "aggs": {
+        "requestType": {
+          "terms": {
+            "field": "requestType"
+          }
+        },
+        "totalTime": {
+          "sum": {
+            "field": "spendTime"
+          }
+        },
+        "agverageTime": {
+          "avg": {
+            "field": "spendTime"
+          }
+        }
+      }
+    },
+    "normal": {
+      "range": {
+        "spendTime": {
+          "gte": "?1",
+          "lt": "?2"
+        }
+      }
+    },
+    "slow": {
+      "range": {
+        "spendTime": {
+          "gte": "?3",
+          "lt": "?4"
+        }
+      }
+    },
+    "very_slow": {
+      "range": {
+        "spendTime": {
+          "gte": "?5",
+          "lt": "?6"
+        }
+      }
+    },
+    "error": {
+      "range": {
+        "spendTime": {
+          "gte": "?7",
+          "lt": "?8"
+        }
+      }
+    },
+    "overdue": {
+      "range": {
+        "spendTime": {
+          "gte": "?9",
+          "lt": "?10"
+        }
+      }
+    },
+    "overdue": {
+      "range": {
+        "spendTime": {
+          "gte": "?11",
+          "lt": "?12"
+        }
+      }
+    }
+  }
+}

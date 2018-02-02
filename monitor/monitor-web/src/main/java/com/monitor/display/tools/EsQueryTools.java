@@ -10,9 +10,9 @@ import java.util.List;
  */
 public class EsQueryTools {
 
-	public static void buildCallChainStartTimeQuery(StringBuilder queryBuilder, String startTime) {
+	public static void buildStartTimeQuery(StringBuilder queryBuilder, String propertyName, String startTime) {
 		if (StringUtils.isNotBlank(startTime)) {
-			queryBuilder.append("{\"range\":{\"startTime\":{\"gte\":");
+			queryBuilder.append("{\"range\":{\"").append(propertyName).append("\":{\"gte\":");
 			queryBuilder.append("\"");
 			queryBuilder.append(startTime);
 			queryBuilder.append("\"");
@@ -22,9 +22,9 @@ public class EsQueryTools {
 
 
 
-	public static void buildCallChainEndTimeQuery(StringBuilder queryBuilder, String endTime) {
+	public static void buildEndTimeQuery(StringBuilder queryBuilder, String propertyName, String endTime) {
 		if (StringUtils.isNotBlank(endTime)) {
-			queryBuilder.append("{\"range\":{\"endTime\":{\"lte\":");
+			queryBuilder.append("{\"range\":{\"").append(propertyName).append("\":{\"lte\":");
 			queryBuilder.append("\"");
 			queryBuilder.append(endTime);
 			queryBuilder.append("\"");
@@ -34,11 +34,11 @@ public class EsQueryTools {
 
 
 
-	public static void buildCallChainApplicationQuery(StringBuilder queryBuilder, String applicationName) {
-		if (StringUtils.isNotBlank(applicationName)) {
-			queryBuilder.append("{\"term\":{\"applicationNames\":");
+	public static void buildTermQuery(StringBuilder queryBuilder, String propertyName, String propertyValue) {
+		if (StringUtils.isNotBlank(propertyValue)) {
+			queryBuilder.append("{\"term\":{\"").append(propertyName).append("\":");
 			queryBuilder.append("\"");
-			queryBuilder.append(applicationName);
+			queryBuilder.append(propertyValue);
 			queryBuilder.append("\"");
 			queryBuilder.append("}},");
 		}

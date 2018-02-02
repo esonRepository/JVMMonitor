@@ -168,6 +168,7 @@ public class EsClient {
 			} else {
 				for (String msg : msgs) {
 					JSONObject json = JSON.parseObject(msg);
+					logger.info("存储"+ json);
 					String id = json.getString("id");
 					bulkRequest.add(transportClient.prepareIndex("process", "process", id).setSource(
 							json.toJSONString()));

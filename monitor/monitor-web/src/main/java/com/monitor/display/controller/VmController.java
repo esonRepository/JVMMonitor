@@ -2,6 +2,7 @@ package com.monitor.display.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.monitor.display.dto.callchain.CallChainQueryDto;
+import com.monitor.display.dto.vm.VMDashBoardDto;
 import com.monitor.display.service.CallChainSearchService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,7 +22,7 @@ public class VmController {
 
 
 	@RequestMapping(value = "/vm/vm.html")
-	public String vmInfo(Model model, CallChainQueryDto queryDto) {
+	public String vmInfo(Model model, VMDashBoardDto queryDto) {
 		return "vm/vm";
 	}
 }
